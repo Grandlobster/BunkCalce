@@ -1,0 +1,31 @@
+days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+# Initialize an empty dictionary
+schedule_dict = {[[x for x in range(1,8) for _ in daily_schedules]]}
+
+
+# Use a for loop to create key-value pairs
+for day_number in range(1, 31):
+    # Use modulo operator to cycle through days of the week
+    day_name = days_of_week[(day_number - 1) % len(days_of_week)]
+    schedule_dict[day_number] = day_name
+
+# Print the resulting dictionary
+print(schedule_dict)
+# whole new logic 
+
+monday = ["CDP", "OOP"]
+tuesday = ["Math", "Physics"]
+wednesday = []
+thursday = []
+friday = ["History"]
+saturday = []
+daily_schedules = [monday, tuesday, wednesday, thursday, friday, saturday]
+for day_num in range(1,31):
+def logic():
+    for _ in month():
+        count=0
+        if( _ == "sunday"):
+            count+=1
+    total_days=31-count
+    
