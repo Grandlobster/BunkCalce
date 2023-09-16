@@ -1,9 +1,21 @@
+#Consider this as readme file to lazy :/
+#The problem statement demands for machine learning approach in scheduleing 
+'''for this we can approach the problem by dynamic schedueling and also apply 
+patient booking scheduler and data driven scheduler
+Such as dental ward mighgt be more demanding in particular month due to 
+ factors  '''
 #This program is for logic of schedueling dental ward's patients effectively
 #This is a working logic only for a week or two 
 #There for days might be preferred instead of days 
 #This is only backend needs API desiging and all other shits
 #The clock to be used should be of twenty four hours format 
+''' Health function refers to overall scheduled quality 
+Filter function filters the avaliable doctors according to their preferances and 
+lectures '''
+#If the user can use emacs it would be better as various flow charts and various ideas 
+#Could be discussed in the file itself  
 import calendar 
+allocated_doctors=[]
 class doctors:
     def _init_(self,name,degree,time,holiday,lecture,operation):
         self.name= name
@@ -13,6 +25,8 @@ class doctors:
         self.lecture= lecture
         self.operation= operation
 class patients:
+    #A special ID of each patient can be created to store data such of the patients
+    #Data may contain diagonosis
     def _init_(self,name,age,case,case_severity,pref_time=0,pref_day=0):
         self.name=name
         self.age= age
@@ -22,8 +36,71 @@ class patients:
         self.pref_day=pref_day
 #Defining a list // dicitionary or ricitoanry for patients list 
 #This list only contains patients severity and index numbers are there 
-patients_list={1:"JOhn",2:"Jonny",3:"Mr X"}
+patients_list={1:2,2:3,3:4}
 doctor_1=doctors("Dr Gardi",2,1,12,5,1)
-doctors_list={1:doctors.A,2:"B",3:"C"}
+doctors_list={1:doctor_1,2:"B",3:"C"}
+#Assign doctor that is more qualified to severy cases and interns to less severes
+class interns(doctors):
+    def __init__(self, name, degree, time, holiday, lecture, operation,level=0):
+        super().__init__(name, degree, time, holiday)
+        self.lecture = lecture
+        self.operation = operation
+        self.level=level
+Patients_list={1:2,2:3,3:5}
+#This logic was is for assigning work only for qualified work i.e doctor having the 
+#the particular qualification for doing the work if fulfilled it is assigned 
+for i in patients_list:
+    value=patients_list[i]
+    for j in doctors_list:
+        valuer=doctors_list[j]
+        if value==valuer:
+            allocated_doctors.append(valuer)
+def health_function(health):
+    health +=1
+    #The function is incomplete
+    #Logic would be same as timetable scheduler 
+    #determing the health might be challenging *the factors*
+
+    return health
+def fitler_function(unfiltered_list,filtered_list,coffee):
+   # unfiltered_list=doctors_list[]
+   
+   infinty= -99
+   
+   if doctor_1.operation > infinty:
+       pass
+   #This function is for making the list of qualified doctors 
+   #List of Patiens 
+   #list of patients according to their disease can be done for example
+   #mouth_filling=[]
+   #root_canal=[]
+   #tooth_removal=[]
+   #cleaning=[]
+   #crowning=[]
+   #first_visit=[]
+   #Doctors list can also be qualified like this or set may be used accordingly
+   #senior_doctors=[]
+   #universal_list=[]
+   #intern_fresh=[]
+   #root_canal_specialist=[]
+   #group_diagnosis=[]
+   def timings_manager(time,breaks,emergency):
+       pass
+   def lecture_manager(manage):
+       pass
+''''''
+   
+
+       
+       
+       
+
+    
+
+
+
+
+        
+
 
 
